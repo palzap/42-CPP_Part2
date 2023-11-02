@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 11:27:57 by pealexan          #+#    #+#             */
-/*   Updated: 2023/10/26 12:52:14 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:49:55 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ bool Form::getSigned() const {
 void Form::beSigned(Bureaucrat& bureaucrat) {
 	if (bureaucrat.getGrade() > this->getGradeSign())
 		throw GradeTooLowException();
+	std::cout << bureaucrat.getName() << " signs " << this->getName() << "." << std::endl;
 	this->_signed = true;
 }
 

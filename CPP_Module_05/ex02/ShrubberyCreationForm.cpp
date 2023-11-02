@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:15:13 by pealexan          #+#    #+#             */
-/*   Updated: 2023/10/26 15:41:05 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:22:37 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,16 @@ void ShrubberyCreationForm::executeForm() const {
 	
 	outfile.open((this->_target + "_shrubbery").c_str());
 	if (outfile.is_open()) {
-		outfile << "	               ,@@@@@@@,					\n";
+		outfile << "	            ,@@@@@@@,					    \n";
 		outfile << "       ,,,.   ,@@@@@@/@@,  .oo8888o.			\n";
 		outfile << "    ,&%%&%&&%,@@@@@/@@@@@@,8888\\88/8o			\n";
 		outfile << "   ,%&\\%&&%&&%,@@@\\@@@/@@@88\\88888/88'		\n";
 		outfile << "   %&&%&%&/%&&%@@\\@@/ /@@@88888\\88888'		\n";
 		outfile << "   %&&%/ %&%%&&@@\\ V /@@' `88\\8 `/88'			\n";
 		outfile << "   `&%\\ ` /%&'    |.|        \\ '|8'			\n";
-		outfile << "	   |o|        | |         | |				\n";
-		outfile << "	   |.|        | |         | |				\n";
-		outfile << "	\\/ ._\\//_/__/  ,\\_//__\\\\/.  \\_//__/_	\n";
+		outfile << "	    |o|        | |         | |				\n";
+		outfile << "		 |.|        | |         | |				\n";
+		outfile << "	  \\/ ._\\//_/__/  ,\\_//__\\\\/.  \\_//__/_	\n";
 		outfile.close();
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 10:59:03 by pealexan          #+#    #+#             */
-/*   Updated: 2023/10/26 12:59:57 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:34:55 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,28 @@ void Bureaucrat::decrementGrade() {
 		throw GradeTooLowException();
 }
 
-void Bureaucrat::signForm(Form& form) {
+void Bureaucrat::signForm(AForm& form) {
 	if (form.getSigned())
 		std::cout << this->getName() << " signed " << form.getName() << "." << std::endl;
 	else {
 		if (this->_grade <= form.getGradeSign())
 			form.beSigned(*this);
 		else {
-			throw Form::GradeTooLowException();
+			throw AForm::GradeTooLowException();
 		}
+	}
+}
+
+void Bureaucrat::executeForm(const AForm& form) {
+	if (this->getGrade() > form.getGradeExec()) {
+		std::cout << this->_name << " couldn't execute " << form.getName() << " because their grade is too low." << std::endl;
+	}
+	if (!form.getSigned()) {
+		std::cout << this->_name << " couldn't execute " << form.getName() << " because it wasn't signed." << std::endl;
+	}
+	else {
+		form.execute(*this);
+		std::cout << this->_name << " executed " << form.getName() << "." << std::endl;
 	}
 }
 

@@ -6,7 +6,7 @@
 #    By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/02 12:26:28 by pealexan          #+#    #+#              #
-#    Updated: 2023/10/26 14:58:18 by pealexan         ###   ########.fr        #
+#    Updated: 2023/11/02 11:13:59 by pealexan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ OBJ_DIR		= bin
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FILES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
 NAME			= Form
-_FILES			= main Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardon
+_FILES			= main Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardonForm
 OBJS			= $(_FILES:%=%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 

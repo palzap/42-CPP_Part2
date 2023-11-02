@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 11:27:02 by pealexan          #+#    #+#             */
-/*   Updated: 2023/10/26 15:26:16 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:09:11 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,16 @@ public:
 	};
 	
 	class GradeTooLowException : public std::exception {
+	public:
+		virtual const char *what() const throw();
+	};
+
+	class FormNotSignedException : public std::exception {
+	public:
+		virtual const char *what() const throw();
+	};
+
+	class BureaucratGradeTooLowException : public std::exception {
 	public:
 		virtual const char *what() const throw();
 	};

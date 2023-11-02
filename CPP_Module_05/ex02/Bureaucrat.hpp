@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 10:54:09 by pealexan          #+#    #+#             */
-/*   Updated: 2023/10/26 15:04:51 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:12:19 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ public:
 	
 	void incrementGrade();
 	void decrementGrade();
-	void signForm(Form& form);
+	void signForm(AForm& form);
+	void executeForm(AForm const &form);
 
 	class GradeTooHighException : public std::exception {
 	public:
