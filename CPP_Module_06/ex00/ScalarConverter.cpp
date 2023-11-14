@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:11:19 by pealexan          #+#    #+#             */
-/*   Updated: 2023/11/08 14:43:26 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/11/14 09:58:44 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -181,7 +181,6 @@ bool ScalarConverter::check_overflow(const std::string &str, t_type type)
 
 void ScalarConverter::convert(const std::string &input)
 {
-    std::cout << std::fixed << std::setprecision(1);
     if (isChar(input))
         printInput(input[0], input);
     else if (isInt(input))
