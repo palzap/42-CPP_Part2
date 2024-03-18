@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 14:29:57 by pealexan          #+#    #+#             */
-/*   Updated: 2024/03/18 14:40:19 by pealexan         ###   ########.fr       */
+/*   Updated: 2024/03/18 15:57:34 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(int argc, char **argv) {
 		}
 	}
 	
-	// after it passes the check for non numeric arguments put the sequence in a vector;
+	// Push values to a vector
 	std::vector<int> numbers;
 	for (int i = 1; i < argc; i++) {
 		numbers.push_back(atoi(argv[i]));
